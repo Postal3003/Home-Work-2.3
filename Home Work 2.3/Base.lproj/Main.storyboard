@@ -87,8 +87,32 @@
                     <view key="view" contentMode="scaleToFill" id="yiF-iS-1CG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKi-Nu-axQ">
+                                <rect key="frame" x="175" y="643" width="64" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcom, User" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eL-0x-kb5">
+                                <rect key="frame" x="148" y="220" width="118" height="23"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vKa-0o-2jR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7eL-0x-kb5" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="Rmb-UR-kS4"/>
+                            <constraint firstItem="UKi-Nu-axQ" firstAttribute="top" secondItem="vKa-0o-2jR" secondAttribute="top" constant="643" id="X1r-ld-gvl"/>
+                            <constraint firstItem="7eL-0x-kb5" firstAttribute="top" secondItem="vKa-0o-2jR" secondAttribute="top" constant="220" id="eCX-I3-WEH"/>
+                            <constraint firstItem="vKa-0o-2jR" firstAttribute="bottom" secondItem="UKi-Nu-axQ" secondAttribute="bottom" constant="134" id="iUy-E7-9xe"/>
+                            <constraint firstItem="UKi-Nu-axQ" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="yiA-1P-jYi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAw-SC-Sj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,9 +121,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
