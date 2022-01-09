@@ -11,7 +11,7 @@
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login Screen View Controller" customClass="ViewController" customModule="Home_Work_2_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login Screen View Controller" customClass="LoginViewController" customModule="Home_Work_2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="e6j-lk-wp2" kind="presentation" id="Klz-l9-18x"/>
+                                            <segue destination="e6j-lk-wp2" kind="presentation" id="X5O-uT-ueu"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-hP-Zu7">
@@ -82,46 +82,58 @@
         <!--Welcome View Controller-->
         <scene sceneID="1DJ-Se-ZoY">
             <objects>
-                <viewController id="e6j-lk-wp2" userLabel="Welcome View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yiF-iS-1CG">
+                <viewController id="e6j-lk-wp2" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Home_Work_2_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiF-iS-1CG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKi-Nu-axQ">
-                                <rect key="frame" x="155.5" y="643" width="64" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Log out">
-                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcom, User" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eL-0x-kb5">
-                                <rect key="frame" x="128.5" y="220" width="118" height="23"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcom" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="k4q-Pp-hkF">
+                                <rect key="frame" x="142" y="175" width="91" height="30.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="👋" textAlignment="center" minimumFontSize="58" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-qp-oqP">
+                                <rect key="frame" x="156" y="245.5" width="63" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUi-zZ-DB2">
+                                <rect key="frame" x="152.5" y="505" width="70" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="WQN-d2-9o0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vKa-0o-2jR"/>
                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7eL-0x-kb5" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="Rmb-UR-kS4"/>
-                            <constraint firstItem="UKi-Nu-axQ" firstAttribute="top" secondItem="vKa-0o-2jR" secondAttribute="top" constant="643" id="X1r-ld-gvl"/>
-                            <constraint firstItem="7eL-0x-kb5" firstAttribute="top" secondItem="vKa-0o-2jR" secondAttribute="top" constant="220" id="eCX-I3-WEH"/>
-                            <constraint firstItem="vKa-0o-2jR" firstAttribute="bottom" secondItem="UKi-Nu-axQ" secondAttribute="bottom" constant="134" id="iUy-E7-9xe"/>
-                            <constraint firstItem="UKi-Nu-axQ" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="yiA-1P-jYi"/>
+                            <constraint firstItem="OiS-qp-oqP" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="1ew-oX-bJL"/>
+                            <constraint firstItem="EUi-zZ-DB2" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="7Rm-8L-QSU"/>
+                            <constraint firstItem="vKa-0o-2jR" firstAttribute="bottom" secondItem="EUi-zZ-DB2" secondAttribute="bottom" constant="111" id="P9A-q6-lEQ"/>
+                            <constraint firstItem="OiS-qp-oqP" firstAttribute="top" secondItem="k4q-Pp-hkF" secondAttribute="bottom" constant="40" id="Xe2-n7-H0I"/>
+                            <constraint firstItem="k4q-Pp-hkF" firstAttribute="top" secondItem="vKa-0o-2jR" secondAttribute="top" constant="175" id="mbm-9Z-53E"/>
+                            <constraint firstItem="k4q-Pp-hkF" firstAttribute="centerX" secondItem="OiS-qp-oqP" secondAttribute="centerX" id="uEM-FG-pig"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAw-SC-Sj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778" y="71"/>
+            <point key="canvasLocation" x="746" y="71"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
