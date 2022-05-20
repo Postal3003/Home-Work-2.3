@@ -8,22 +8,73 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    
+    
+    // MARK: - IB Outlets
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    
+    // MARK: - Private properties
+    private let user = "Dima"
+    private let password = "21031988BD"
+    
     
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let welcomeVC = segue.destination as! WelcomeViewController
+        welcomeVC.user = user
     }
-    */
 
+    
+    // MARK: - IBActions
+    
+    @IBAction func logInPressed() {
+        if userNameTextField.text != user || passwordTextField.text != password {
+           showAlert(title: "Ошибка!!!", message: "А вы точно знаете логин и пароль?", textField: passwordTextField)
+            }
+
+
+        }
+    
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Зовут тебя \(user) 👑")
+        : showAlert(title: "Oops!", message: "Твой пароль \(password)")
+
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
 }
+
+// MARK: - Private Metods
+extension LoginViewController {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
