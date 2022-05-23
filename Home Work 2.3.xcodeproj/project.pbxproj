@@ -39,6 +39,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D6CD622283B6B640065FDEF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA8027278B2A4700EFCEEF /* LoginViewController.swift */,
+				6DBA8023278B24A700EFCEEF /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6D6CD623283B6BDB0065FDEF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6DD9C3D0276A5DBA0042107F /* Main.storyboard */,
+				6DD9C3D5276A5DBB0042107F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6D6CD624283B6D030065FDEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DD9C3D3276A5DBB0042107F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D6CD626283B6DF70065FDEF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6DD9C3CA276A5DBA0042107F /* AppDelegate.swift */,
+				6DD9C3CC276A5DBA0042107F /* SceneDelegate.swift */,
+				6DD9C3D8276A5DBB0042107F /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		6DD9C3BE276A5DBA0042107F = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +94,10 @@
 		6DD9C3C9276A5DBA0042107F /* Home Work 2.3 */ = {
 			isa = PBXGroup;
 			children = (
-				6DD9C3CA276A5DBA0042107F /* AppDelegate.swift */,
-				6DD9C3CC276A5DBA0042107F /* SceneDelegate.swift */,
-				6DBA8027278B2A4700EFCEEF /* LoginViewController.swift */,
-				6DBA8023278B24A700EFCEEF /* WelcomeViewController.swift */,
-				6DD9C3D0276A5DBA0042107F /* Main.storyboard */,
-				6DD9C3D3276A5DBB0042107F /* Assets.xcassets */,
-				6DD9C3D5276A5DBB0042107F /* LaunchScreen.storyboard */,
-				6DD9C3D8276A5DBB0042107F /* Info.plist */,
+				6D6CD622283B6B640065FDEF /* ViewControllers */,
+				6D6CD623283B6BDB0065FDEF /* Storyboards */,
+				6D6CD626283B6DF70065FDEF /* SupportingFiles */,
+				6D6CD624283B6D030065FDEF /* Resources */,
 			);
 			path = "Home Work 2.3";
 			sourceTree = "<group>";
@@ -295,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49Y6LADA97;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Home Work 2.3/Info.plist";
+				INFOPLIST_FILE = "Home Work 2.3/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49Y6LADA97;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Home Work 2.3/Info.plist";
+				INFOPLIST_FILE = "Home Work 2.3/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
