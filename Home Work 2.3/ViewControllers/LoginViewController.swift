@@ -18,8 +18,7 @@ class LoginViewController: UIViewController {
     
     
     // MARK: - Private properties
-    private let user = "Dima"
-    private let password = "21031988BD"
+    private let user = User.getUserData()
     
     
 

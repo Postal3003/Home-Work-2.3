@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D6CD628283B78460065FDEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CD627283B78460065FDEF /* User.swift */; };
 		6DBA8024278B24A700EFCEEF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA8023278B24A700EFCEEF /* WelcomeViewController.swift */; };
 		6DBA8028278B2A4700EFCEEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA8027278B2A4700EFCEEF /* LoginViewController.swift */; };
 		6DD9C3CB276A5DBA0042107F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD9C3CA276A5DBA0042107F /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D6CD627283B78460065FDEF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6DBA8023278B24A700EFCEEF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6DBA8027278B2A4700EFCEEF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DD9C3C7276A5DBA0042107F /* Home Work 2.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Work 2.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		6D6CD629283B78660065FDEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D6CD627283B78460065FDEF /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6DD9C3BE276A5DBA0042107F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6D6CD622283B6B640065FDEF /* ViewControllers */,
+				6D6CD629283B78660065FDEF /* Models */,
 				6D6CD623283B6BDB0065FDEF /* Storyboards */,
 				6D6CD626283B6DF70065FDEF /* SupportingFiles */,
 				6D6CD624283B6D030065FDEF /* Resources */,
@@ -176,6 +187,7 @@
 				6DBA8028278B2A4700EFCEEF /* LoginViewController.swift in Sources */,
 				6DBA8024278B24A700EFCEEF /* WelcomeViewController.swift in Sources */,
 				6DD9C3CB276A5DBA0042107F /* AppDelegate.swift in Sources */,
+				6D6CD628283B78460065FDEF /* User.swift in Sources */,
 				6DD9C3CD276A5DBA0042107F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
