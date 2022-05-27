@@ -24,25 +24,42 @@ class LoginViewController: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as! WelcomeViewController
-        welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as?
+                        UINavigationController {
+                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                userInfoVC.user = user
+                
+            }
+        }
     }
 
     
     // MARK: - IBActions
     
     @IBAction func logInPressed() {
-        if userNameTextField.text != user || passwordTextField.text != password {
-           showAlert(title: "Ошибка!!!", message: "А вы точно знаете логин и пароль?", textField: passwordTextField)
-            }
+        if userNameTextField.text != user.login || passwordTextField.text != user.password {
+           showAlert(title: "Ошибка!!!",
+                     message: "А вы точно знаете логин и пароль?",
+                     textField: passwordTextField
+           )
+            return
+        }
 
-
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        
+        
         }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Зовут тебя \(user) 👑")
-        : showAlert(title: "Oops!", message: "Твой пароль \(password)")
+        ? showAlert(title: "Oops!", message: "Зовут тебя \(user.login) 👑")
+        : showAlert(title: "Oops!", message: "Твой пароль \(user.password)")
 
     }
     
@@ -65,6 +82,23 @@ extension LoginViewController {
     }
 }
 
+// MARK: - Alert Controller
+extension LoginViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            logInPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        }
+        return true
+    }
+}
 
 
 

@@ -15,6 +15,7 @@ class ImageViewController: UIViewController {
             imageView.layer.cornerRadius = imageView.frame.height / 2
         }
     }
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -44,7 +44,7 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJl-Vc-OzT"/>
-                                            <segue destination="c8e-iU-tmS" kind="presentation" id="X5O-uT-ueu"/>
+                                            <segue destination="c8e-iU-tmS" kind="presentation" identifier="showWelcomeVC" id="X5O-uT-ueu"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-hP-Zu7">
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="71"/>
+            <point key="canvasLocation" x="30" y="71"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="ZYK-Hn-h6A">
