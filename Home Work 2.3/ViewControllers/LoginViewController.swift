@@ -52,8 +52,8 @@ class LoginViewController: UIViewController {
         }
 
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
-        
-        
+
+
         }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {

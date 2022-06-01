@@ -98,12 +98,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY7-pZ-PqB">
-                                <rect key="frame" x="147" y="307" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY7-pZ-PqB">
+                                <rect key="frame" x="137" y="310" width="101" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Mor Info"/>
+                                <state key="normal" title="More Info"/>
                                 <connections>
                                     <segue destination="pTS-Ns-qdk" kind="show" id="3Rw-Ln-1Tp"/>
                                 </connections>
@@ -111,6 +110,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="akb-SP-Cq2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hY7-pZ-PqB" firstAttribute="centerX" secondItem="akb-SP-Cq2" secondAttribute="centerX" id="YAz-Gp-WbF"/>
+                            <constraint firstItem="hY7-pZ-PqB" firstAttribute="centerY" secondItem="akb-SP-Cq2" secondAttribute="centerY" id="qjf-Nt-hLc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HLu-q3-Bcg"/>
                 </viewController>
@@ -126,13 +129,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1r-Pf-qfb">
-                                <rect key="frame" x="62" y="198" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Алиса и Папа" highlightedImage="Алиса и Папа" translatesAutoresizingMaskIntoConstraints="NO" id="C1r-Pf-qfb">
+                                <rect key="frame" x="16" y="44" width="343" height="250"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="XAN-7E-YpS">
+                                <rect key="frame" x="16" y="314" width="343" height="177"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">    My name is Dmitry, but my friends call me Dima. I am 33 years old. I am from Polotsk from Belarus. I graduated from University in 2010. I am married and have two beautiful children. Son Herman is 2 years old and daughter Alice is 6 years old. My wife's name is Svetlana, she is 33 years old and she is a very beautiful and intelligent woman. We have a Jack Russell Terrier dog and her name is Gucci.
+</string>
+                                <color key="textColor" red="0.086551912128925323" green="0.13283774256706238" blue="0.72617644071578979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kl3-fD-JvD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C1r-Pf-qfb" firstAttribute="top" secondItem="kl3-fD-JvD" secondAttribute="top" id="D8w-4R-uqi"/>
+                            <constraint firstItem="XAN-7E-YpS" firstAttribute="bottom" secondItem="kl3-fD-JvD" secondAttribute="bottom" constant="-127" id="JSJ-51-U94"/>
+                            <constraint firstItem="kl3-fD-JvD" firstAttribute="trailing" secondItem="XAN-7E-YpS" secondAttribute="trailing" constant="16" id="Mbj-ml-69i"/>
+                            <constraint firstItem="XAN-7E-YpS" firstAttribute="leading" secondItem="kl3-fD-JvD" secondAttribute="leading" constant="16" id="cfe-XS-38b"/>
+                            <constraint firstItem="XAN-7E-YpS" firstAttribute="top" secondItem="C1r-Pf-qfb" secondAttribute="bottom" constant="20" id="cuG-NF-tkO"/>
+                            <constraint firstItem="kl3-fD-JvD" firstAttribute="bottom" secondItem="C1r-Pf-qfb" secondAttribute="bottom" constant="324" id="rkv-vB-0PB"/>
+                            <constraint firstItem="C1r-Pf-qfb" firstAttribute="leading" secondItem="kl3-fD-JvD" secondAttribute="leading" constant="16" id="rwF-vP-aY7"/>
+                            <constraint firstItem="kl3-fD-JvD" firstAttribute="trailing" secondItem="C1r-Pf-qfb" secondAttribute="trailing" constant="16" id="ua4-XS-o9O"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GNu-mK-enK"/>
                     <connections>
@@ -153,12 +174,11 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcom" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="k4q-Pp-hkF">
                                 <rect key="frame" x="142" y="175" width="91" height="30.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="👋" textAlignment="center" minimumFontSize="58" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-qp-oqP">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="👋" textAlignment="center" minimumFontSize="58" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-qp-oqP">
                                 <rect key="frame" x="156" y="245.5" width="63" height="71"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -179,7 +199,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vKa-0o-2jR"/>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92920917272567749" green="0.98770171403884888" blue="0.015920883044600487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OiS-qp-oqP" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="1ew-oX-bJL"/>
                             <constraint firstItem="EUi-zZ-DB2" firstAttribute="centerX" secondItem="yiF-iS-1CG" secondAttribute="centerX" id="7Rm-8L-QSU"/>
@@ -189,7 +209,7 @@
                             <constraint firstItem="k4q-Pp-hkF" firstAttribute="centerX" secondItem="OiS-qp-oqP" secondAttribute="centerX" id="uEM-FG-pig"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="mrT-uA-vuU"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-главная-60()" id="mrT-uA-vuU"/>
                     <connections>
                         <outlet property="welkomeLabel" destination="k4q-Pp-hkF" id="Dt8-H8-0H7"/>
                     </connections>
@@ -222,7 +242,7 @@
         <scene sceneID="vFr-ec-N9u">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hb6-bG-VLR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="BYg-ft-wLc"/>
+                    <tabBarItem key="tabBarItem" title="User" image="icons8-мужчина-пользователь-60()" id="BYg-ft-wLc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9wH-YW-Kyd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -239,9 +259,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="icons8-главная-60()" width="30" height="30"/>
+        <image name="icons8-мужчина-пользователь-60()" width="30" height="30"/>
+        <image name="Алиса и Папа" width="1024" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

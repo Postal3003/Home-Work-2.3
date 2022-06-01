@@ -10,9 +10,10 @@ import UIKit
 class ImageViewController: UIViewController {
 
     
+    
     @IBOutlet var imageView: UIImageView! {
         didSet {
-            imageView.layer.cornerRadius = imageView.frame.height / 2
+            imageView.layer.cornerRadius = imageView.frame.height / 11
         }
     }
     var user: User!

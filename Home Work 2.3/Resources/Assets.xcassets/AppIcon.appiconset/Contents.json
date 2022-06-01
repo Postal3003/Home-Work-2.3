@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "icons8-семья-40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -21,6 +22,7 @@
       "size" : "29x29"
     },
     {
+      "filename" : "icons8-семья-80.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
